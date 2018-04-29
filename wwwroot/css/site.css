@@ -62,6 +62,7 @@
   display: inline-block;
   width: 33%;
   text-align: center;
+  vertical-align: top;
 }
 .members img {
   margin: auto;
