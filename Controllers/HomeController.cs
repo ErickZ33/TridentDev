@@ -18,9 +18,9 @@ namespace TridentDev2.Controllers
 
         [HttpPost]
         [Route("submitForm")]
-        public IActionResult submitFrom()
+        public IActionResult submitFrom(string last_name)
         {
-            Console.WriteLine("Testing");
+            Console.WriteLine(last_name);
             return Redirect("/");
         }
     }
