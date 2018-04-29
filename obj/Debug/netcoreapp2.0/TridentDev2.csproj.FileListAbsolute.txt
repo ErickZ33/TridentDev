@@ -1,0 +1,10 @@
+/Users/erick_ruiz23/Desktop/TridentDev2/bin/Debug/netcoreapp2.0/TridentDev2.deps.json
+/Users/erick_ruiz23/Desktop/TridentDev2/bin/Debug/netcoreapp2.0/TridentDev2.runtimeconfig.json
+/Users/erick_ruiz23/Desktop/TridentDev2/bin/Debug/netcoreapp2.0/TridentDev2.runtimeconfig.dev.json
+/Users/erick_ruiz23/Desktop/TridentDev2/bin/Debug/netcoreapp2.0/TridentDev2.dll
+/Users/erick_ruiz23/Desktop/TridentDev2/bin/Debug/netcoreapp2.0/TridentDev2.pdb
+/Users/erick_ruiz23/Desktop/TridentDev2/obj/Debug/netcoreapp2.0/TridentDev2.csproj.CoreCompileInputs.cache
+/Users/erick_ruiz23/Desktop/TridentDev2/obj/Debug/netcoreapp2.0/TridentDev2.AssemblyInfoInputs.cache
+/Users/erick_ruiz23/Desktop/TridentDev2/obj/Debug/netcoreapp2.0/TridentDev2.AssemblyInfo.cs
+/Users/erick_ruiz23/Desktop/TridentDev2/obj/Debug/netcoreapp2.0/TridentDev2.dll
+/Users/erick_ruiz23/Desktop/TridentDev2/obj/Debug/netcoreapp2.0/TridentDev2.pdb

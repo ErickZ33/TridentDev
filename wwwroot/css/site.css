@@ -1,0 +1,79 @@
+/*Write all of your CSS here*/
+/* ID's */
+#landingPage{
+    text-align: center;
+    color: white;
+    padding-top: 200px;
+}
+#navbar{
+    width: 100%;
+    height: 75px;
+    top: 0;
+    transition: top 0.8s;
+    position: fixed;
+    z-index: 1;
+}
+#navbar a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 22px;
+    padding-right: 22px;
+}
+#navbar a:hover{
+    color: #333;
+}
+
+#header {
+  display: block;
+}
+
+/* Classes */
+
+.parallax img{
+  z-index: 0;
+
+
+}
+
+.logo{
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.section_header {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.section.clear{
+  height: 250px;
+}
+
+.section.white {
+  background-color: #F5F5F5 !important;
+}
+
+.members {
+  margin: auto;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.members img {
+  margin: auto;
+}
+.members span {
+  color: #A9A9A9;
+}
+
+.button {
+  border-radius: 5px;
+}
+
+.centerText {
+  text-align: center;
+}

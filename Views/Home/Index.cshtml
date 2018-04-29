@@ -1,0 +1,145 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div id="wrapper">
+
+        <div id="navbar">
+            <div class="row">
+              <div class="col m9">
+                  <img class="logo" src="https://i.pinimg.com/originals/c4/60/7a/c4607a5e6a611c6f9c2cef66539c8ad8.png">
+              </div>
+              <div class="col m1">
+                  <a href="#home">Home</a>
+              </div>
+              <div class="col m1">
+                  <a href="#news">Team</a>
+              </div>
+              <div class="col m1">
+                  <a href="#contact">Contact Us</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="parallax-container" id="landingPage">
+            <h1>Welcome To Trident Development</h1>
+            <!-- add changing text animation under h1 -->
+            <div class="parallax">
+                <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NGTYhyRhgilq4uu1a/seamless-3d-animation-sea-wave-and-ripple-on-the-seaside-shore-beach-at-night-with-sparkling-stars-and-moon-glowing-in-4k-ultra-hd_sptw5sdk__F0005.png">
+            </div>
+        </div>
+
+        <div class="section white">
+            <div class="row container">
+                <h2 class="header">About us</h2>
+                <p class="grey-text text-darken-3 lighten-3">We are a team of dope mfs who enjoy building cool shit.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo deserunt dolores, unde deleniti maxime aliquid est, magni cupiditate animi explicabo repudiandae expedita omnis autem ipsa error aperiam dolorum vel nostrum.</p>
+            </div>
+        </div>
+
+        <div class = "section clear">
+          <div class="parallax-container">
+            <div class="parallax">
+              <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NGTYhyRhgilq4uu1a/seamless-3d-animation-sea-wave-and-ripple-on-the-seaside-shore-beach-at-night-with-sparkling-stars-and-moon-glowing-in-4k-ultra-hd_sptw5sdk__F0005.png">
+            </div>
+          </div>
+        </div>
+
+        <div class = "section white">
+          <div class = "row container">
+            <!-- include emphasis on Education: && Development Emphasis with separate p elements & inline-block -->
+            <h3 class = "centerText">Our Team</h3>
+              <div class = "members">
+                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiLCUT_7riFyqzur5EIrR-hnOZf5Vx7zIN-A4AG2D0WnJYz85IfA">
+                <p class = "section_header">Carlos Flores</p>
+                <p>
+                  <span>Education: </span>
+                  B.S. Electrical Engineering
+                </p>
+                <p>
+                  <span>Development Emphasis: </span>
+                  Embedded Software / Web Development
+                </p>
+              </div>
+              <div class = "members">
+                <img class = "prof_pic" src = "https://t00.deviantart.net/xuSY40_11i0XwbdZSyNwAi0KbEE=/300x200/filters:fixed_height(100,100):origin()/pre00/1667/th/pre/f/2009/132/9/b/custom_firefox_icon_by_daolpu.png">
+                <p class = "section_header">Darryl Lopez</p>
+                <p>
+                  <span>Education: </span>
+                  B.S. Computer Science
+                </p>
+                <p>
+                  <span>Development Emphasis: </span>
+                  iOS Applications / Web Development
+                </p>
+              </div>
+              <div class = "members">
+                <img class = "prof_pic" class = "prof_pic" src = "http://extracatchy.net/wp-content/uploads/2017/02/enternet-explorer.jpg">
+                <p class = "section_header">Erick Ruiz</p>
+                <p>
+                  <span>Education: </span>
+                  B.S. Computer Science
+                </p>
+                <p>
+                  <span>Certifications: </span>
+                  Coding Dojo
+                </p>
+                <p>
+                  <span>Development Emphasis: </span>
+                  Web Development
+                </p>
+              </div>
+          </div>
+        </div>
+
+        <div class = "section clear">
+          <div class="parallax-container">
+              <div class="parallax">
+                  <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NGTYhyRhgilq4uu1a/seamless-3d-animation-sea-wave-and-ripple-on-the-seaside-shore-beach-at-night-with-sparkling-stars-and-moon-glowing-in-4k-ultra-hd_sptw5sdk__F0005.png">
+              </div>
+          </div>
+        </div>
+
+        <div class = "section white">
+          <div class = "row container">
+            <h4 class = "contact">Contact Us</h4>
+            <p>
+              Got a problem? Feel free to fill out the form below to give us a brief description of the project.
+            </p>
+            <!-- check for garbage input, strip tags from input -->
+            <form name = "proj_info"  >
+              <!-- check for valid email -->
+              <label for = "first_name">First Name:</label>
+              <input type = "text" id = "first_name" name = "first_name"/>
+
+              <label for = "last_name">Last Name:</label>
+              <input type = "text" id = "last_name" name = "last_name"/>
+
+              <label for = "email">Email:</label>
+              <input type = "text" id = "email" name = "email"/>
+
+              <label for = "desc">Give us a brief description of your project:</label>
+              <textarea class="materialize-textarea" form = "proj_info" rows = "4"></textarea></br>
+              <input class = "button" type = "submit" />
+            </form>
+          </div>
+        </div>
+
+        <div class = "section clear">
+          <div class="parallax-container">
+              <div class="parallax">
+                  <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NGTYhyRhgilq4uu1a/seamless-3d-animation-sea-wave-and-ripple-on-the-seaside-shore-beach-at-night-with-sparkling-stars-and-moon-glowing-in-4k-ultra-hd_sptw5sdk__F0005.png">
+              </div>
+          </div>
+        </div>
+
+        <div class = "footer">
+          <div class = "section white">
+            <div class = "row container">
+              <p class = "section_header">Contact information</p>
+              <p>Email: ????</p>
+              <p>Phone: 8154039971</p>
+            </div>
+          </div>
+        </div>
+
+    </div>
