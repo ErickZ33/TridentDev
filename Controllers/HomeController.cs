@@ -15,5 +15,13 @@ namespace TridentDev2.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [Route("submitForm")]
+        public IActionResult submitFrom()
+        {
+            Console.WriteLine("Testing");
+            return Redirect("/");
+        }
     }
 }
