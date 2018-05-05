@@ -1,0 +1,23 @@
+﻿
+@using TridentDev2.Models
+@model TridentDev2.Models.EmailViewModel
+<form id="proj_info" method="post" asp-controller="EmailViewModel" asp-action="SubmitForm">
+    <label asp-for="First_Name">First Name:</label>
+    <span asp-validation-for="First_Name"></span>
+    <input asp-for="First_Name" type="text" />
+
+    <label asp-for="Last_Name">Last Name:</label>
+    <span asp-validation-for="Last_Name"></span>
+    <input asp-for="Last_Name" type="text" />
+
+    <label asp-for="Email_Address">Email Address:</label>
+    <span asp-validation-for="Email_Address"></span>
+    <input asp-for="Email_Address" type="text" />
+
+    <label asp-for="Description">Give us a brief Description of your project:</label>
+    <span asp-validation-for="Description"></span>
+    <textarea asp-for="Description" form="proj_info" rows="4"></textarea>
+
+    <button id="button" type="submit">Submit</button>
+</form>
+
