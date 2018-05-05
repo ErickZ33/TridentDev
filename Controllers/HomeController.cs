@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using TridentDev2.Models;
 
 namespace TridentDev2.Controllers
 {
@@ -17,11 +18,10 @@ namespace TridentDev2.Controllers
         }
 
         [HttpPost]
-        [Route("submitForm")]
-        public IActionResult submitFrom(string last_name)
+        [Route("SubmitForm")]
+        public ActionResult SubmitForm(EmailViewModel model)
         {
-            Console.WriteLine(last_name);
-            return Redirect("/");
+            return View(model);
         }
     }
 }
