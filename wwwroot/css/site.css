@@ -29,12 +29,19 @@
   display: block;
 }
 
+#proj_info span {
+  font-size: 10px;
+  color: red;
+}
+
 /* Classes */
 
-.parallax img{
-  z-index: 0;
+.parallax {
+  z-index: -1;
+}
 
-
+.parallax-container {
+    z-index: -1;
 }
 
 .logo{
