@@ -13,5 +13,20 @@ $(document).ready(function () {
         }
         prevScrollpos = currentScrollPos;
     }
-    
+
+    $('#button').click(function (event) {
+        event.preventDefault();
+
+        $.ajax({
+
+            url: "SubmitForm",
+            type: "post",
+            data: $("#proj_info").serialize(),
+            success: function (result) {
+                $("#proj_info").replaceWith(result);
+            }
+
+        });
+    })
+
 });
