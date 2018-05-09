@@ -16,6 +16,7 @@ $(document).ready(function () {
 
     $('#button').click(function (event) {
         event.preventDefault();
+        $(this).prop("disabled", true); // disable button for length of function to prevent multiple submits
 
         $.ajax({
 
@@ -23,10 +24,41 @@ $(document).ready(function () {
             type: "post",
             data: $("#proj_info").serialize(),
             success: function (result) {
+                // replace form with updates
                 $("#proj_info").replaceWith(result);
+
+                // search updates for empty spans
+
+                // get count of empty spans in form element
+                var count_empty = 0;
+
+                $('#proj_info').find('span').each( function(index, element) {
+
+                    if($(element).is(':empty')) {
+                        count_empty++;
+                    }
+
+                });
+
+                if(count_empty == 4) { // 4 empty spans -> valid form
+
+                    $('#proj_info').find('input').each( function(index, element) {
+                        $(element).val(""); // blank out form details
+                    })
+
+                    $('#Description').val(""); // description not "input" : handle separately
+
+                    $('#proj_info').prepend("<p id='form_success'>Form Successfully Submitted. Thank You!</p>");
+
+                }
+
             }
 
-        });
-    })
+        }); // end ajax
 
-});
+        // once complete, enable button again
+        $(this).prop("disabled", false); 
+    }) // end button.click
+
+}); // end document.ready
+

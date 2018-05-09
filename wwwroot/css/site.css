@@ -34,6 +34,12 @@
   color: red;
 }
 
+#form_success {
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+}
+
 /* Classes */
 
 .parallax {
