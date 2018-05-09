@@ -6,12 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options; // for secure json read
 
 using TridentDev2.Models;
-using TridentDev2.Properties;
-
-using System.Net; // NetworkCredential
-using System.Net.Mail; // email lib
 using static TridentDev2.Models.EmailInfo;
-
+using static TridentDev2.Models.Email;
 
 namespace TridentDev2.Controllers
 {
@@ -31,38 +27,30 @@ namespace TridentDev2.Controllers
         {
             if(ModelState.IsValid)
             {
-                //IOptions<EmailOptions> EmailConfig;
 
-                var from_addr = model.Email_Address;
-                var to_addr = new MailAddress(EmailInfo.User, $"{from_addr}");
-                Console.WriteLine(EmailInfo.User);
+                //NOTE: Send confirmation email!!!
 
-                //const string to_pass = "Tr1d3ntD3v";
-                string subject = "Project Information";
-                string body = $"Brief description of possible project: \n{model.Description}\n\n" +
+                var ptn_addr = model.Email_Address; // potential client address
+
+                string tri_subject = "Project Information";
+                string tri_body = $"Brief description of potential project: \n{model.Description}\n\n" +
                             $"Contact information: \n" +
                             $"First Name: {model.First_Name}\n" +
                             $"Last Name: {model.Last_Name}\n" +
-                            $"Email Address: {from_addr}";
+                            $"Email Address: {ptn_addr}";
 
-                var smtp = new SmtpClient
-                {
-                    Host = "smtp.gmail.com",
-                    Port = 587,
-                    EnableSsl = true,
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
-                    Credentials = new NetworkCredential(to_addr.Address, EmailInfo.Pass),
-                    Timeout = 20000
-                };
+                Email.Send(EmailInfo.User, tri_subject, tri_body); // Tridents copy
 
-                using (var message = new MailMessage(to_addr, to_addr) // send it to ourselves
-                {
-                    Subject = subject,
-                    Body = body
-                })
+                string ptn_subject = "Trident Development - Project Details";
+                string ptn_body = $"Hello {model.First_Name} {model.Last_Name},\n\n" + 
+                                $"We've received the information regarding your project.  Give us a couple days to get back to you." + 
+                                $"If you'd like to get in contact with us personally you can reach Carlos at jcarlosfloresortiz@gmail.com, " + 
+                                $"Erick at EricksEmail@email.com, or Darryl at DarrylsEmail@email.com" + 
+                                $"Thank you for considering us!\n" + "-Team Trident\n\n" + 
+                                $"This is an automatically generated email, DOT NOT REPLY";
 
-                    smtp.Send(message);
+                Email.Send(ptn_addr, ptn_subject, ptn_body); // prospect confirmation email
+
                 EmailViewModel blank_model = new EmailViewModel { };
                 return View(blank_model);
             }
