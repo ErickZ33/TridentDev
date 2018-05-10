@@ -20,7 +20,7 @@ $(document).ready(function () {
 
         $.ajax({
 
-            url: "SubmitForm",
+            url: "SubmitForm", // validation route
             type: "post",
             data: $("#proj_info").serialize(),
             success: function (result) {
@@ -34,19 +34,17 @@ $(document).ready(function () {
 
                 $('#proj_info').find('span').each( function(index, element) {
 
-                    if($(element).is(':empty')) {
-                        count_empty++;
+                    if($(element).is(':empty')) { 
+                        count_empty++; // count valid fields (empty spans)
                     }
 
                 });
 
                 if(count_empty == 4) { // 4 empty spans -> valid form
 
-                    $('#proj_info').find('input').each( function(index, element) {
+                    $('#proj_info').find('input, textarea').each( function(index, element) {
                         $(element).val(""); // blank out form details
                     })
-
-                    $('#Description').val(""); // description not "input" : handle separately
 
                     $('#proj_info').prepend("<p id='form_success'>Form Successfully Submitted. Thank You!</p>");
 
