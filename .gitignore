@@ -2,5 +2,6 @@
 appsetting.json
 EmailInfo.cs
 EmailOptions.cs
-**obj/
-TridentDev2.csproj
+obj/*/*/TridentDev2.*
+bin/
+.DS_Store
