@@ -2,5 +2,5 @@
 appsetting.json
 EmailInfo.cs
 EmailOptions.cs
-obj/
+**obj/
 TridentDev2.csproj
